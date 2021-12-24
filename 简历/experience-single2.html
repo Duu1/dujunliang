@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>News Theme blog</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Old+Standard+TT" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Old+Standard+TT:400,500,700" rel="stylesheet">
+		<!--    <link rel="stylesheet" type="text/css" href="css/animate.css" /> -->
+		<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" />
+		<link href="css/jquery.bsPhotoGallery.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+
+	<body>
+		<header class="static-header">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-4 col-sm-4 col-12 share-sec">
+						<ul>
+							<li>
+								<a href=""> <span class="fab fa-facebook"></span></a>
+							</li>
+							<li>
+								<a href=""> <span class="fab fa-instagram"></span></a>
+							</li>
+							<li>
+								<a href=""> <span class="fab fa-twitter"></span></a>
+							</li>
+							<li>
+								<a href=""> <span class="fab fa-pinterest"></span></a>
+							</li>
+							<li>
+								<a href=""> <span class="fab fa-google-plus-g"></span></a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-6 col-md-4 col-sm-4 col-8 singnature">
+						<img src="images/signature.png" alt="sign">
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-4 col-12 cv-sec">
+						<a href="index.html" class="download-sec right">个人主页</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="blog-single">
+			<div class="container">
+				<div class="blog-ttl-sec">
+					<span class="icon-sec"><i class="far fa-newspaper"></i></span>
+					<h1>人事管理系统 .</h1>
+					<div class="share-sec">
+						<ul>
+							<li class="share-text"><span>Share On :</span></li>
+							<li>
+								<a href=""> <span class="fab fa-facebook"></span></a>
+							</li>
+							<li>
+								<a href=""> <span class="fab fa-instagram"></span></a>
+							</li>
+							<li>
+								<a href=""> <span class="fab fa-twitter"></span></a>
+							</li>
+							<li>
+								<a href=""> <span class="fab fa-pinterest"></span></a>
+							</li>
+							<li>
+								<a href=""> <span class="fab fa-google-plus-g"></span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="main-content">
+					<p>软件环境： Tomcat 6.0、Struts 2.0 + Spring 3.0 + Hibernate 3.0框架、JSP+CSS+JavaScrip+AJax技术、SQL Server数据库</p>
+						<p>硬件环境：Windows WIN10</p>
+						<p>开发工具：MyEclipse8.5</p>
+				
+
+					<blockquote>
+						<h3>项目职责：</h3>
+						
+						1、采用DIV+CSS+JS技术进行页面布局与美化，并实现国际化，通过重定向避免数据的重复提交，提供分页显示数据。
+						2、收集封装数据，采用JavaScript、Validator验证框架对表单数据进行合法性校验。
+						3、通过Struts的DMI调用业务逻辑处理、流程跳转，建立异常体系处理异常。
+						4、在DAO层通过Spring的HibernateTemplate、IOC实现Spring和Hibernate整合，在BIZ层采用AOP编程，在 CONTROL层通过代理模式实现Spring和Struts整合。
+
+					</blockquote>
+
+					<p>
+						项目描述：
+                                         该系统主要面向公司内部，完成公司人事管理、员工签到管理以及人员信息登记业务。人事管理业务包括长期工（有固定职位、职称的工作人员）与短期实习工（无职位）等。员工签到管理包括上下班打卡记录以及考勤记录等信息。只有管理员能够查询与修改所有人员上班记录；增、删、查、改员工信息、管理员信息；按日生成员工签到记录；按月生成月人员签到信息统计报表并允许员工通过Internet查询自己当前和以往上下班签到记录。
+
+					</p>
+
+					<p>
+						项目总结：
+						在查询数据时经常会出现Hibernate延迟加载问题，由于我们控制事务是在BIZ层，但是有些Entity用到了延迟加载，当需要在显示层显示的时候Hibernate才会把延迟的代理通Session去数据库中获取数据，但是这时候事务已经关闭了意味着session也结束了生命周期，这样就会造成LazyInitializationException，此类异常的解决：
+     					1、在映射文件中在延迟建加载的一方设置lazy=”false”。
+        				2、在web.xml中配置OpenSessionInViewFilter。
+
+					</p>
+					
+				</div>
+
+				<div class="similar-posts">
+					<h2>Similar Posts</h2>
+					<div class="post-grop">
+						<ul>
+							<li class="blog-item">
+								<h3>Beautiful road like waterfall in the california of south most beautiful view.</h3>
+								<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem type specimen book. It not only five</h5>
+								<a href="#">Read More</a>
+
+							</li>
+							<li class="blog-item">
+								<h3>Beautiful road like waterfall in the california of south most beautiful view.</h3>
+								<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem type specimen book. It not only five</h5>
+								<a href="#">Read More</a>
+
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-4 ">
+						<img src="images/footer-sign.png" alt="sign">
+					</div>
+					<div class="col-md-6 col-sm-8">
+						<h6 class="right copy-right">Copyright &copy; <a href="#" target="_blank" title=""></a></h6>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js">
+		</script>
+		<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		<script src="js/jquery.mixitup.min.js"></script>
+		<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+		<script type="text/javascript" src="js/jquery.isotope.js"></script>
+		<script src="js/jquery.bsPhotoGallery.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('ul.first').bsPhotoGallery({
+					"classes": "col-md-3 col-sm-4 col-2 ",
+					"hasModal": true,
+					// "fullHeight" : false
+				});
+			});
+		</script>
+	</body>
+
+</html>
